@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jupyter:
+    image: jupyter/minimal-notebook
+    user: 1000:1000
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./data:/data
+      
